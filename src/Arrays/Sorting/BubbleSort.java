@@ -2,6 +2,7 @@ package Arrays.Sorting;
 import java.util.Scanner;
 public class BubbleSort {
     public static void main(String[] args) {
+//        Time Complexity  : Best case = O(n) , Worst Case = O(n^2)
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter length of the array");
         int n = sc.nextInt();
