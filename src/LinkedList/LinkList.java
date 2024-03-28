@@ -8,6 +8,7 @@ package LinkedList;
         this.size = 0;
     }
 
+//    Node class
         public class Node{
             public Node(){
 
@@ -16,9 +17,11 @@ package LinkedList;
                 this.val = value;
                 this.next = null;
             }
-            Node next;
-            int val;
+            public Node next;
+            public int val;
         }
+
+//        Adding a new node at first
         public void addAtFirst(int value){
             Node node = new Node(value);
             if(head == null && tail == null){
@@ -29,6 +32,8 @@ package LinkedList;
                 head = node;
             }
         }
+
+//        Adding a new node at last
         public void add(int value){
             Node node = new Node(value);
             if(head == null && tail == null){
@@ -39,6 +44,8 @@ package LinkedList;
                 tail = node;
             }
         }
+
+//        Printing linked list
         public void display(){
             Node temp = head;
             while(temp != null){
@@ -46,6 +53,8 @@ package LinkedList;
                 temp = temp.next;
             }
         }
+
+//        Linked list reversal
         public void reverse(){
             Node prev = null;
             Node curr = head;
@@ -58,4 +67,15 @@ package LinkedList;
             }
             head = prev;
         }
+
+        public Node getMiddle(){
+            if(head == null|| head.next == null ) return head;
+            Node slow = head, fast = head;
+            do{
+                slow = slow.next;
+                fast = fast.next.next;
+            }while(fast != null && fast.next != null);
+            return slow;
+        }
+
 }
