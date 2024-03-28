@@ -54,7 +54,17 @@ package LinkedList;
             }
         }
 
-//        Linked list reversal
+//        Printing from a point in linked list
+        public void display(Node x){
+        Node temp = x;
+        while(temp != null){
+            System.out.print(temp.val + " -> ");
+            temp = temp.next;
+        }
+    }
+
+
+    //        Linked list reversal
         public void reverse(){
             Node prev = null;
             Node curr = head;
@@ -68,7 +78,23 @@ package LinkedList;
             head = prev;
         }
 
-        public Node getMiddle(){
+//        Reverse list using a Node as point
+
+    public Node reverse(Node node){
+        Node prev = null;
+        Node curr = node;
+        Node next;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
+
+
+    public Node getMiddle(){
             if(head == null|| head.next == null ) return head;
             Node slow = head, fast = head;
             do{
