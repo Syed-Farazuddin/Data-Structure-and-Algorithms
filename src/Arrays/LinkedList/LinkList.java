@@ -21,9 +21,20 @@ public class LinkList {
         Node node = new Node(value);
         if(head == null && tail == null){
             head = node;
+            tail = node;
         }else{
             node.next = head;
             head = node;
+        }
+    }
+    public void add(int value){
+        Node node = new Node(value);
+        if(head == null && tail == null){
+            head = node;
+            tail = node;
+        }else{
+            tail.next = node;
+            tail = node;
         }
     }
     public void display(){
