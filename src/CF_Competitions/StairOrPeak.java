@@ -10,13 +10,13 @@ public class StairOrPeak {
             int a = sc.nextInt();
             int b = sc.nextInt();
             int c = sc.nextInt();
-            if(a < b && b<c && a < c){
-                System.out.println("STAIR");
+            if(a < b && b<c){
+                System.out.print("STAIR\n");
             }
-            else if(b>a && b>c){
-                System.out.println("PEAK");
+            else if(a<b && b>c){
+                System.out.print("PEAK\n");
             }else{
-                System.out.println("NONE");
+                System.out.print("NONE\n");
             }
             cases--;
         }
