@@ -1,4 +1,4 @@
-package CF_Competitions;
+//package CF_Competitions;
 
 import java.util.Scanner;
 

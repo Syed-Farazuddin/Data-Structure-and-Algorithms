@@ -1,4 +1,4 @@
-package CF_Competitions;
+//package CF_Competitions;
 
 import java.util.Scanner;
 
@@ -10,11 +10,11 @@ public class ClockConversion {
             int f =0;
             String i = sc.next();
             int h = (i.charAt(0)- '0')*10 + (i.charAt(1) - '0');
-            if(h > 12) {
+            if(h >= 12) {
                 h -= 12;
                 f=1;
             }
-            String hh = h + "";
+            String hh = h==0 ? "12" : h + "";
             if(hh.length() == 1){
                 hh = "0" + hh;
             }
