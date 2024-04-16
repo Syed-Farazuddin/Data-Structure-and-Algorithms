@@ -5,21 +5,19 @@ import java.util.ArrayList;
 
 public class Subsequences {
     public static void main(String[] args) {
-        int [] arr = {1,2,3,4,5};
+        int [] arr = {1,2,3};
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            printSubsequences(arr,i);
-        }
+        printSubsequences(arr,0,list);
     }
 
-    private static void printSubsequences(int[] arr, int i) {
-        if(i > arr.length-1) {
+    private static void printSubsequences(int[] arr, int i,ArrayList<Integer> list) {
+        if(i >= arr.length) {
+            System.out.println(list);
             return;
         }
-        for (int j = 0; j < i; j++) {
-            System.out.print(arr[j] + " ");
-        }
-        System.out.println();
-        printSubsequences(arr,i+1);
+        list.add(arr[i]);
+        printSubsequences(arr,i+1,list);
+        list.remove(list.size()-1);
+        printSubsequences(arr,i+1,list);
     }
 }
