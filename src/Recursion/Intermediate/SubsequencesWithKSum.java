@@ -11,6 +11,7 @@ public class SubsequencesWithKSum {
     }
 
     private static void PrintSubsequencesWithKSum(int[] arr, int i, int k, int sum, ArrayList<Integer> list) {
+        if(sum > k) return;
         if(i == arr.length && sum == k) {
             System.out.println(list);
             return;
