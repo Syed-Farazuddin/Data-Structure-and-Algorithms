@@ -2,14 +2,19 @@ package Recursion.basic;
 
 public class SumOfOneToN {
     public static void main(String[] args) {
-        SumOfN(10 , 0);
+        Parameterized(10 , 0);
+        System.out.println(functional(10));
     }
 
-    private static void SumOfN(int i, int sum) {
+    private static void Parameterized(int i, int sum) {
         if(i < 1) {
             System.out.println(sum);
             return;
         }
-        SumOfN(i-1,sum+i);
+        Parameterized(i-1,sum+i);
+    }
+    private static int functional(int i){
+        if(i == 0) return 0;
+        return i + functional(i-1);
     }
 }
