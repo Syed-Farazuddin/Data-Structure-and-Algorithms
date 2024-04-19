@@ -20,7 +20,8 @@ public class XORDistance2 {
 //            ans = Math.min(Math.abs((a ^ curr) - (b ^ curr)), ans);
 //        }
 //        System.out.println(ans);
-        sammyMethod();
+//        sammyMethod();
+        makeX(9 , 6);
     }
 
     private static int CountBits(int x) {
