@@ -13,7 +13,8 @@ public class SecondONe {
 //                n = n-1;
 //            }
 //            System.out.println();
-        findOr();
+//        findOr();
+        System.out.println(131%12);
         }
     private static void findOr(){
         Scanner sc = new Scanner(System.in);
